@@ -1,4 +1,4 @@
-**English** | [**Русский**](https://github.com/runetfreedom/force-proxy/blob/master/README.md)
+**English** | [**Русский**](https://github.com/runetfreedom/discord-voice-proxy/blob/master/README.ru.md)
 
 # What is This
 
