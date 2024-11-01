@@ -42,7 +42,7 @@ namespace DiscordProxyInstaller
                 }
             }
 
-            if (process.Contains("nekoray"))
+            if (process.Contains("nekoray") || process.Contains("nekobox"))
             {
                 if (Ask("Found NekoRay / NekoBox. Do you want to use 127.0.0.1:2080?"))
                 {
