@@ -41,14 +41,19 @@ namespace DiscordProxyInstaller
             return Path.Join(root, "app-" + result);
         }
 
-        public static void Install(string host, string port)
+        public static void Install(string host, string port, string login = "", string password = "")
         {
             var appDir = GetAppDirectory();
 
             WriteResourceToFile("DWrite.dll", Path.Join(appDir, "DWrite.dll"));
             WriteResourceToFile("force-proxy.dll", Path.Join(appDir, "force-proxy.dll"));
 
-            var lines = new string[] { "SOCKS5_PROXY_ADDRESS=" + host, "SOCKS5_PROXY_PORT=" + port };
+            var lines = new string[] {
+                "SOCKS5_PROXY_ADDRESS=" + host,
+                "SOCKS5_PROXY_PORT=" + port,
+                "SOCKS5_PROXY_LOGIN=" + login,
+                "SOCKS5_PROXY_PASSWORD=" + password,
+            };
             File.WriteAllLines(Path.Join(appDir, "proxy.txt"), lines);
         }
 
@@ -63,10 +68,15 @@ namespace DiscordProxyInstaller
             process.Start();
         }
 
-        public static void InstallAndRun(string host, string port)
+        public static void InstallAndRun(string host, string port, string login = "", string password = "")
         {
             Kill();
-            Install(host, port);
+            Install(
+              host,
+              port,
+              !string.IsNullOrEmpty(login) ? login : "empty",
+              !string.IsNullOrEmpty(password) ? password : "empty"
+            );
             Run();
         }
 

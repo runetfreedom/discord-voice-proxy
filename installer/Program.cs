@@ -66,7 +66,13 @@ namespace DiscordProxyInstaller
             Console.Write("Enter socks5 port: ");
             var port = Console.ReadLine();
 
-            Discord.InstallAndRun(host ?? "", port ?? "");
+            Console.Write("Enter socks5 login (optional): ");
+            var login = Console.ReadLine();
+
+            Console.Write("Enter socks5 password (optional): ");
+            var password = Console.ReadLine();
+
+            Discord.InstallAndRun(host ?? "", port ?? "", login ?? "", password ?? "");
         }
     }
 }
