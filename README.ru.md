@@ -44,4 +44,11 @@ SOCKS5_PROXY_ADDRESS=ВАШ_ПРОКСИ_IP
 SOCKS5_PROXY_PORT=ВАШ_ПРОКСИ_ПОРТ
 ```
 
+Опционально вы можете передать данные для SOCKS5 авторизации с помощью: 
+
+```
+SOCKS5_PROXY_LOGIN=login
+SOCKS5_PROXY_PASSWORD=password
+```
+
 Не забудьте перезапустить дискорд. Готово!

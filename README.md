@@ -39,9 +39,16 @@ Prefer manual installation? No problem.
 3. Find the `app` folder with the latest version and place both DLL files there.
 4. Create a file named `proxy.txt` and enter the following:
 
-    ```
-    SOCKS5_PROXY_ADDRESS=YOUR_PROXY_IP
-    SOCKS5_PROXY_PORT=YOUR_PROXY_PORT
-    ```
+ ```
+ SOCKS5_PROXY_ADDRESS=YOUR_PROXY_IP
+ SOCKS5_PROXY_PORT=YOUR_PROXY_PORT
+ ```
+
+Optionally, you can pass SOCKS5 credentials using:
+
+```
+SOCKS5_PROXY_LOGIN=login
+SOCKS5_PROXY_PASSWORD=password
+```
 
 Don’t forget to restart Discord. Done!
