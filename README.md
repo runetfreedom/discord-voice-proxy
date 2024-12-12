@@ -28,6 +28,8 @@ For convenience, there is a [ready-to-use installer](https://github.com/runetfre
 2. NekoRay / NekoBox
 3. Invisible Man - XRay (proxy mode must be set to SOCKS)
 
+Note: You should have .NET 8 installed. If you don't have it installed, try downloading and installing it from [here](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
+
 Want to uninstall? Just run the installer again, and it will offer to remove the installed files.
 
 ### Manual Installation
